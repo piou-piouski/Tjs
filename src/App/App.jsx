@@ -8,8 +8,13 @@ function App() {
   return (
     <div className="App">
       Agur Xiberoa<br/>
-      {/* <MemeSVGViewer meme={emptyMeme} image={undefined}/> */}
-      <Button toto="name of prop" />
+      <Button style={{bgColor:'tomato'}} onClickButton={(moi)=>{
+        // console.log('%c%s', 'color:tomato');
+        // alert('je clique', moi);
+      }}>
+        Ok<br/>
+        <img src="https://cdn.pixabay.com/photo/2012/04/26/19/45/check-42926_960_720.png" />
+      </Button>
     </div>
   );
 }
