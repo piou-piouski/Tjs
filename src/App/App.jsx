@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 // import logo from './logo.svg';
 import { MemeSVGViewer, emptyMeme } from 'orsys-tjs-meme';
 import './App.css';
@@ -7,6 +7,19 @@ import Button from './components/ui/Button/Button';
 function App() {
   // let counter = 0;
   const [counter, setcounter] = useState(0)
+  
+  
+  
+  useEffect(() => {
+    console.log('valeur etatique = ' + counter);
+    /*return () => {
+      
+    };*/
+  }, [counter])
+
+
+
+
   return (
     <div className="App">
       Agur Xiberoa : {counter}<br/>
