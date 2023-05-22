@@ -1,13 +1,15 @@
 // import React from 'react';
 // import logo from './logo.svg';
-import { MemeSVGViewer } from 'orsys-tjs-meme';
+import { MemeSVGViewer, emptyMeme } from 'orsys-tjs-meme';
 import './App.css';
+import Button from './components/ui/Button/Button';
 
 function App() {
   return (
     <div className="App">
-      AGUR
-      <MemeSVGViewer />
+      Agur Xiberoa<br/>
+      {/* <MemeSVGViewer meme={emptyMeme} image={undefined}/> */}
+      <Button toto="name of prop" />
     </div>
   );
 }
