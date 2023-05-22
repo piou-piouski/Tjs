@@ -22,12 +22,13 @@ const Button:React.FC<I_Buttonprops> = (props) => {
 Button.propTypes={
     children: PropTypes.any.isRequired,
     onClickButton: PropTypes.func.isRequired,
+    // onClickButton: PropTypes.func,
     bgColor: PropTypes.string.isRequired,
     style: PropTypes.object,
     type: PropTypes.oneOf(['submit', 'reset', 'button'])
 }
 Button.defaultProps={
-    bgColor: "lime",
+    //bgColor: "lime",
     type: "reset"
 }
 export default Button;

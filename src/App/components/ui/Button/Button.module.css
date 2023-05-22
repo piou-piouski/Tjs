@@ -6,3 +6,16 @@
     border-radius: 3px;
     box-shadow: 5px 5px 5px rgba(0,0,0,.3);
 }
+
+.Button>img{
+    max-width: 125px;
+    height: 60px;
+}
+
+.Button:hover{
+    box-shadow: 15px 15px 15px rgba(219, 34, 34, 0.911);
+}
+
+.clicked{
+    box-shadow: 15px 15px 15px rgba(28, 238, 81, 0.911) inset !important;
+}
