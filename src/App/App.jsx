@@ -7,6 +7,7 @@ import Button from './components/ui/Button/Button';
 function App() {
   // let counter = 0;
   const [counter, setcounter] = useState(0)
+  // const [click, setclick] = useState(false)
   
   
   
@@ -17,6 +18,8 @@ function App() {
     };*/
   }, [counter])
 
+  
+
 
 
 
@@ -26,6 +29,7 @@ function App() {
       <Button bgColor='tomato' style={{bgColor:'tomato'}} onClickButton={()=>{
         // counter--;
         setcounter(counter-1);
+        // setclick(true);
         console.log(counter);
       }}>
         1
@@ -35,12 +39,15 @@ function App() {
       <Button bgColor='lime' onClickButton={()=>{
         // counter++;
         setcounter(counter+1);
+        // setclick(false);
         console.log(counter);
         // console.log('%c%s', 'color:tomato');
         // alert('je clique', moi);
       }}>
         +1
       </Button>
+
+
     </div>
   );
 }

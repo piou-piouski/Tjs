@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './Button.module.css'
 import PropTypes from 'prop-types'
 
@@ -11,9 +11,23 @@ interface I_Buttonprops{
 }
 
 const Button:React.FC<I_Buttonprops> = (props) => {
+    const [click, setclick] = useState(false)
+
+    useEffect(() => {
+        console.log('valeur etatique = ' + click);
+        if(!click)
+        {
+            setTimeout(()=>{setclick(true)}, 2000)
+        }
+        /*return () => {
+          
+        };*/
+      }, [click])
+
     return <button onClick={(evt)=>{
         props.onClickButton();
-    }} className={styles.Button}
+        setclick(true);
+    }} className={click?styles.Button:styles.Button+styles.click}
         style={{...props.style, backgroundColor: props.bgColor}}
         type={props.type}
         >{props.children}</button>
