@@ -14,8 +14,10 @@
 
 .Button:hover{
     box-shadow: 15px 15px 15px rgba(219, 34, 34, 0.911);
+    /* font-size: 18px; */
 }
 
 .clicked{
-    box-shadow: 15px 15px 15px rgba(28, 238, 81, 0.911) inset !important;
+    /* box-shadow: 15px 15px 15px rgba(28, 238, 81, 0.911) inset !important; */
+    font-size: 32px;
 }

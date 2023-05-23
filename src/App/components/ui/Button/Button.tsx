@@ -28,7 +28,7 @@ const Button:React.FC<I_Buttonprops> = (props) => {
     return <button onClick={(evt)=>{
         props.onClickButton();
         setclick(true);
-    }} className={!click?styles.Button:styles.Button+styles.click}
+    }} className={!click?styles.Button:styles.Button+' '+styles.clicked}
         style={{...props.style, backgroundColor: props.bgColor}}
         type={props.type}
         >{props.children}</button>
