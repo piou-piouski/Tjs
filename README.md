@@ -48,8 +48,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 Liste des extensions VSCode
 code --install-extension burkeholland.simple-react-snippets
-code --install-extension christian-kohler.npm-intellisense        
-code --install-extension christian-kohler.path-intellisense       
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension ecmel.vscode-html-css
@@ -61,8 +61,8 @@ code --install-extension hansu.git-graph-2
 code --install-extension infeng.vscode-react-typescript
 code --install-extension jasonnutter.search-node-modules
 code --install-extension jawandarajbir.react-vscode-extension-pack
-code --install-extension justinmahar.react-bootstrap-snippets     
-code --install-extension MS-CEINTL.vscode-language-pack-fr        
+code --install-extension justinmahar.react-bootstrap-snippets
+code --install-extension MS-CEINTL.vscode-language-pack-fr
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension OfHumanBondage.react-proptypes-intellisense
 code --install-extension runningcoder.react-snippets

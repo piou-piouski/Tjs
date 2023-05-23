@@ -18,7 +18,7 @@ const Button:React.FC<I_Buttonprops> = (props) => {
         if(click)
         {
             //console.log('if = ' + click);
-            setTimeout(()=>{setclick(false)}, 2000)
+            setTimeout(()=>{setclick(false)}, 1000)
         }
         /*return () => {
           
