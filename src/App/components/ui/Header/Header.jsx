@@ -12,7 +12,7 @@ const Header = (props) => {
   return (  
   <div className={styles.Header} data-testid="Header">
     <img src="https://img.icons8.com/?size=512&id=PjUpgs6o2IFx&format=png"/>
-    Bienvenu sur le générateur de MEME
+    Bienvenue sur le générateur de MEME
   </div>
 )};
 

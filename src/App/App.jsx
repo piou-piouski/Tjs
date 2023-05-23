@@ -13,13 +13,15 @@ import Navbar from './components/ui/Navbar/Navbar';
 
 
 function App(props) {
+  const [meme, setmeme] = useState(emptyMeme)
+
   return (
     <FlexH3Grow>
       <Header />
       <Navbar />
       <FlexW1Grow>
-        <MemeSVGViewer meme={emptyMeme} image={undefined} />
-        <MemeForm />
+        <MemeSVGViewer meme={meme} image={undefined} />
+        <MemeForm meme={meme} onMemeChange={(meme)=>{setmeme(meme);}}/>
       </FlexW1Grow>
       <Footer />
     </FlexH3Grow>
