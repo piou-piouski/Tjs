@@ -13,15 +13,24 @@ import Navbar from './components/ui/Navbar/Navbar';
 
 
 function App(props) {
-  const [meme, setmeme] = useState(emptyMeme)
+  const [meme, setmeme] = useState(emptyMeme);
+
+  const [imgs, setimgs] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5679/images`)
+    .then(r=>r.json())
+    .then(arr=>setimgs(arr));
+  }, [])
+
 
   return (
     <FlexH3Grow>
       <Header />
       <Navbar />
       <FlexW1Grow>
-        <MemeSVGViewer meme={meme} image={undefined} />
-        <MemeForm meme={meme} onMemeChange={(meme)=>{setmeme(meme);}}/>
+        <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
+        <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
       </FlexW1Grow>
       <Footer />
     </FlexH3Grow>
