@@ -15,9 +15,10 @@ const Button:React.FC<I_Buttonprops> = (props) => {
 
     useEffect(() => {
         console.log('valeur etatique = ' + click);
-        if(!click)
+        if(click)
         {
-            setTimeout(()=>{setclick(true)}, 2000)
+            //console.log('if = ' + click);
+            setTimeout(()=>{setclick(false)}, 2000)
         }
         /*return () => {
           
@@ -27,7 +28,7 @@ const Button:React.FC<I_Buttonprops> = (props) => {
     return <button onClick={(evt)=>{
         props.onClickButton();
         setclick(true);
-    }} className={click?styles.Button:styles.Button+styles.click}
+    }} className={!click?styles.Button:styles.Button+styles.click}
         style={{...props.style, backgroundColor: props.bgColor}}
         type={props.type}
         >{props.children}</button>

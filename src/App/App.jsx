@@ -12,7 +12,7 @@ function App() {
   
   
   useEffect(() => {
-    console.log('valeur etatique = ' + counter);
+    //console.log('valeur etatique = ' + counter);
     /*return () => {
       
     };*/
@@ -30,7 +30,7 @@ function App() {
         // counter--;
         setcounter(counter-1);
         // setclick(true);
-        console.log(counter);
+        //console.log(counter);
       }}>
         1
         {/* <img src="https://cdn.pixabay.com/photo/2012/04/26/19/45/check-42926_960_720.png" /> */}
@@ -40,7 +40,7 @@ function App() {
         // counter++;
         setcounter(counter+1);
         // setclick(false);
-        console.log(counter);
+        //console.log(counter);
         // console.log('%c%s', 'color:tomato');
         // alert('je clique', moi);
       }}>
