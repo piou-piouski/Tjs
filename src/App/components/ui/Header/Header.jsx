@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Header.module.css';
 
@@ -9,14 +9,10 @@ const initialState = {}
  * @returns react.Component header render
  */
 const Header = (props) => {
-  const [state, setstate] = useState(initialState);
-  useEffect(() => {
-    console.log('Header mounted');
-  }, [])
-
   return (  
   <div className={styles.Header} data-testid="Header">
-    header Component
+    <img src="https://img.icons8.com/?size=512&id=PjUpgs6o2IFx&format=png"/>
+    Bienvenu sur le générateur de MEME
   </div>
 )};
 

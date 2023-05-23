@@ -1,54 +1,29 @@
 import React, {useState, useEffect} from 'react';
-// import logo from './logo.svg';
 import { MemeSVGViewer, emptyMeme } from 'orsys-tjs-meme';
 import './App.css';
-import Button from './components/ui/Button/Button';
 
-function App() {
-  // let counter = 0;
-  const [counter, setcounter] = useState(0)
-  // const [click, setclick] = useState(false)
-  
-  
-  
-  useEffect(() => {
-    //console.log('valeur etatique = ' + counter);
-    /*return () => {
-      
-    };*/
-  }, [counter])
+import MemeForm from './components/functionnal/MemeForm/MemeForm';
 
-  
+import FlexH3Grow from './components/layout/FlexH3Grow/FlexH3Grow';
+import FlexW1Grow from './components/layout/FlexW1Grow/FlexW1Grow';
+
+import Footer from './components/ui/Footer/Footer';
+import Header from './components/ui/Header/Header';
+import Navbar from './components/ui/Navbar/Navbar';
 
 
-
-
+function App(props) {
   return (
-    <div className="App">
-      Agur Xiberoa : {counter}<br/>
-      <Button bgColor='tomato' style={{bgColor:'tomato'}} onClickButton={()=>{
-        // counter--;
-        setcounter(counter-1);
-        // setclick(true);
-        //console.log(counter);
-      }}>
-        1
-        {/* <img src="https://cdn.pixabay.com/photo/2012/04/26/19/45/check-42926_960_720.png" /> */}
-      </Button>
+    <FlexH3Grow>
+      <Header />
+      <Navbar />
+      <FlexW1Grow>
+        <MemeSVGViewer meme={emptyMeme} image={undefined} />
+        <MemeForm />
+      </FlexW1Grow>
+      <Footer />
+    </FlexH3Grow>
 
-      <Button bgColor='lime' onClickButton={()=>{
-        // counter++;
-        setcounter(counter+1);
-        // setclick(false);
-        //console.log(counter);
-        // console.log('%c%s', 'color:tomato');
-        // alert('je clique', moi);
-      }}>
-        +1
-      </Button>
-
-
-    </div>
   );
 }
 

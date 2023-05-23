@@ -1,27 +1,28 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Navbar.module.css';
+import {Navbar as NavBar, Container, Nav} from 'react-bootstrap'
 
-const initialState = {}
 /**
  * navbar component
  * @param {any} props 
  * @returns react.Component navbar render
  */
 const Navbar = (props) => {
-  const [state, setstate] = useState(initialState);
-  useEffect(() => {
-    console.log('Navbar mounted');
-  }, [])
-
+  
   return (  
   <div className={styles.Navbar} data-testid="Navbar">
-    navbar Component
+    <NavBar bg="primary" variant="dark">
+      <Container>
+        <NavBar.Brand href="#home">Navbar</NavBar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Features</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link>
+        </Nav>
+      </Container>
+    </NavBar>
   </div>
 )};
-
-Navbar.propTypes = {};
-
-Navbar.defaultProps = {};
 
 export default Navbar;

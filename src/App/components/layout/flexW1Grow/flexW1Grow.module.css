@@ -1,4 +1,9 @@
 .FlexW1Grow{
     display: flex;
     height: 100%;
+    width: 100%;
+}
+
+.FlexH3Grow>*:nth-child(1){
+    flex-grow: 1;
 }

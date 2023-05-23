@@ -1,1 +1,5 @@
-.Footer {}
+.Footer {
+    background-color: black;
+    color: beige;
+    text-align: center;
+}
