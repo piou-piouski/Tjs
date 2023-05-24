@@ -20,8 +20,8 @@ const Navbar = (props) => {
         <Nav className="me-auto">
           
           
-          <LinkContainer to='/thumbmail'>
-            <Nav.Link href="#">Thumbmail</Nav.Link>
+          <LinkContainer to='/thumbnail'>
+            <Nav.Link href="#">Thumbnail</Nav.Link>
           </LinkContainer>
 
           <LinkContainer to='/meme'>

@@ -8,6 +8,9 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom'
 
+import {Provider} from 'react-redux'
+import { store } from './App/store/store';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,7 +18,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
-    <App />
+      <Provider store={store}>
+      <App />
+      </Provider>
     </Router>
   </React.StrictMode>
 );

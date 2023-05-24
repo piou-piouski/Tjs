@@ -13,9 +13,11 @@ import Navbar from './components/ui/Navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
 
 
+import MemeThumbnail from './pages/MemeThumbnail/MemeThumbnail';
+
+
 function App(props) {
   const [meme, setmeme] = useState(emptyMeme);
-
   const [imgs, setimgs] = useState([]);
   const [memes, setmemes] = useState([]);
 
@@ -40,7 +42,10 @@ function App(props) {
       <Navbar />
       <FlexW1Grow>
         <Routes>
-        <Route path='/thumbmail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} />
+        {/* <Route path='/thumbmail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} /> */}
+
+
+        <Route path='/thumbnail' element={<MemeThumbnail/>} />
         <Route path='/meme' element={<MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />} />
         <Route path='/add' element={
         <>
@@ -48,10 +53,7 @@ function App(props) {
           <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
         </>} />
         
-        {/* <Routes path='/meme' element={<><Meme/></>} /> */}
         
-        {/* <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
-        <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/> */}
         </Routes>
       </FlexW1Grow>
       <Footer />
