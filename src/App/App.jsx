@@ -46,7 +46,7 @@ function App(props) {
         <Routes>
         {/* <Route path='/thumbmail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} /> */}
 
-
+        <Route path='/' element={<h1>Page d'accueil</h1>} />
         <Route path='/thumbnail' element={<MemeThumbnail/>} />
         <Route path='/meme' element={<MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />} />
         {/* <Route path='/add' element={
