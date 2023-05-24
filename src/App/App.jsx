@@ -40,12 +40,14 @@ function App(props) {
       <Navbar />
       <FlexW1Grow>
         <Routes>
-        <Route path='/thumbail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} />
+        <Route path='/thumbmail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} />
         <Route path='/meme' element={<MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />} />
-        <Route path='/add' element={<>
+        <Route path='/add' element={
+        <>
           <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
           <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
         </>} />
+        
         {/* <Routes path='/meme' element={<><Meme/></>} /> */}
         
         {/* <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />

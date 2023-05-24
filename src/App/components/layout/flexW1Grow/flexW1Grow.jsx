@@ -15,7 +15,8 @@ const FlexW1Grow = (props) => {
 )};
 
 FlexW1Grow.propTypes = {
-    children: PropTypes.array.isRequired
+    // children: PropTypes.array.isRequired
+    children: PropTypes.any.isRequired
 };
 
 FlexW1Grow.defaultProps = {};

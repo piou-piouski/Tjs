@@ -1,0 +1,58 @@
+pxxRpaW1x
+192.168.2.100
+
+extension navigateur pour API : YARC
+
+https://lildev.viewdns.net/e2m/
+
+npm trends
+
+Lister les extensions VSCode : 
+	code --list-extensions | % { "code --install-extension $_" }
+
+
+install node-js
+npx create-react-app app --template=typescript
+
+- npm start
+- npm run build
+
+
+git config --global user.email "wierzbicki.y@hotmail.fr"
+git config --global user.name "wierzbicki"
+
+arrow function ()=>{}
+
+
+kill : package-lock.json
+Install Yarn : 
+	- npm i -g yarn
+	- yarn add orsys-tjs-meme
+	
+npx generate-react-cli
+	? Does this project use TypeScript? No
+	? Does this project use styled-components? No
+	? Does this project use CSS modules? Yes
+	? Does this project use a CSS Preprocessor? css
+	? What testing library does your project use? Testing Library
+	? Set the default path directory to where your components will be generated in? src/App/components 
+	? Would you like to create a corresponding stylesheet file with each component you generate? Yes
+	? Would you like to create a corresponding test file with each component you generate? Yes
+	? Would you like to create a corresponding story with each component you generate? Yes
+	? Would you like to create a corresponding lazy file (a file that lazy-loads your component out of the box and enables code splitting: 
+	https://reactjs.org/docs/code-splitting.html#code-splitting) with each component you generate? Yes
+	
+npx generate-react-cli c TemplateName
+
+npx storybook init
+
+yarn cmpUi Navbar Header Footer
+
+
+exercice css => css diner
+
+yarn add react-bootstrap@2.7 bootstrap@5.2
+
+yarn add react-router-dom
+
+yarn add react-router-bootstrap
