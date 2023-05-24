@@ -10,6 +10,7 @@ import FlexW1Grow from './components/layout/FlexW1Grow/FlexW1Grow';
 import Footer from './components/ui/Footer/Footer';
 import Header from './components/ui/Header/Header';
 import Navbar from './components/ui/Navbar/Navbar';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App(props) {
@@ -37,15 +38,32 @@ function App(props) {
     <FlexH3Grow>
       <Header />
       <Navbar />
-      <MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>
-      {/* <FlexW1Grow>
-        <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
-        <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
-      </FlexW1Grow> */}
+      <FlexW1Grow>
+        <Routes>
+        <Route path='/thumbail' element={<MemeSVGThumbnail memes={memes} images={imgs} basePath=''/>} />
+        <Route path='/meme' element={<MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />} />
+        <Route path='/add' element={<>
+          <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
+          <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
+        </>} />
+        {/* <Routes path='/meme' element={<><Meme/></>} /> */}
+        
+        {/* <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
+        <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/> */}
+        </Routes>
+      </FlexW1Grow>
       <Footer />
     </FlexH3Grow>
 
   );
 }
+// function Meme(props){
+//   return(
+//     <>
+//     <MemeSVGViewer meme={props.meme} image={props.imgs.find((img)=>img.id === props.meme.imageId)} basePath='' />
+//     <MemeForm meme={props.meme} images={props.imgs} onMemeChange={props.onMemeChange}/>
+//     </>
+//   )
+// }
 
 export default App;
