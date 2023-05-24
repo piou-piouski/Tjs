@@ -1,6 +1,7 @@
 pxxRpaW1x
 192.168.2.100
 
+github du formateur (Alexandre DESORBAIX) : https://github.com/champix56
 extension navigateur pour API : YARC
 
 https://lildev.viewdns.net/e2m/
