@@ -82,6 +82,21 @@
       "frameSizeY": 0,
       "id": 2,
       "coucou": "Phiphi"
+    },
+    {
+      "titre": "Solana et Yohann",
+      "text": "Solana et Yohann",
+      "x": 134,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#df1616",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 3
     }
   ]
 }

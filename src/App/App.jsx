@@ -15,6 +15,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import MemeThumbnail from './pages/MemeThumbnail/MemeThumbnail';
 
+import MemeEditor from './pages/MemeEditor/MemeEditor';
+
 
 function App(props) {
   const [meme, setmeme] = useState(emptyMeme);
@@ -47,13 +49,18 @@ function App(props) {
 
         <Route path='/thumbnail' element={<MemeThumbnail/>} />
         <Route path='/meme' element={<MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />} />
-        <Route path='/add' element={
+        {/* <Route path='/add' element={
         <>
           <MemeSVGViewer meme={meme} image={imgs.find((img)=>img.id === meme.imageId)} basePath='' />
           <MemeForm meme={meme} images={imgs} onMemeChange={(meme)=>{setmeme(meme);}}/>
-        </>} />
-        
-        
+        </>} /> */}
+        <Route path='/add' element={
+          <MemeEditor/>
+        } />
+
+
+
+
         </Routes>
       </FlexW1Grow>
       <Footer />

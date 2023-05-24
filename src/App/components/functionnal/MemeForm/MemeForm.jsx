@@ -16,7 +16,14 @@ const MemeForm = (props) => {
   }, [])
   return (
     <div className={styles.MemeForm} data-testid="MemeForm">
-      <form>
+      <form onSubmit={evt=>{
+        evt.preventDefault();
+        props.onSaveMeme(props.meme);
+      }}
+      onReset={evt=>{
+        props.onClearMeme();
+      }}
+      >
         <label htmlFor="titre"><h1>Titre</h1></label>
         <br />
         <input name="titre" id="titre" value={props.meme.titre} onChange={evt=>{
